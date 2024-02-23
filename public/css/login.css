@@ -1,0 +1,216 @@
+body {
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size: 1.1rem;
+    background-color: #f4f4f4;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.logo-container {
+    text-align: center;
+    margin: 0px;
+    max-width: 100%;
+}
+
+.logo-container img {
+    max-width: 60%;
+    height: auto;
+    transform-origin: center;
+    margin-top: -50px;
+    filter: drop-shadow(0 5px 5px rgba(0, 0, 0, 0.3));
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+    
+}
+
+.checkbox-container input {
+    /* width: auto;
+    margin-top: 6px; */
+    /* margin-right: 6px; */
+    margin: 0px;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-bottom: 0px;
+    vertical-align: middle;
+    line-height: 1;
+}
+
+.checkbox-container label {
+    /* margin-right: 10px; */
+    vertical-align: middle;
+    line-height: 1;
+    display: inline-block;
+}
+
+.enlace-simple{
+    color: #3498db;
+    text-decoration: underline;
+    text-align: center;
+}
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    max-width: 100%;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.form-container label {
+    text-align: left;
+    width: 100%;
+    margin-left: 4px;
+}
+
+#error-container {
+    top: 50%;
+    color: black;
+    background-color: #ff19008f;
+    padding: 8px;
+    border-radius: 4px;
+    position: absolute;
+    z-index: 1002;
+    display: flex;
+    align-items: center;
+    animation: mostrarAnimacion 0.5s ease-out forwards;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+.error-icon {
+    width: 32px;
+    margin-right: 4px;
+    z-index: 1003;
+}
+
+.error-txt {
+    font-weight: 600;
+    margin: 5px;
+}
+
+
+.mostrando {
+    opacity: 1;
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    display: flex !important;
+    margin: 0;
+}
+
+
+@keyframes mostrarAnimacion {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    border: 3px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+input:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1rem;
+    width: 100%;
+}
+
+button.volver {
+    background-color: #98a7b3;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.register-text{
+    text-align: center;
+}
+
+
+
+#loader {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    z-index: 1000;
+}
+
+#loader img {
+    width: 50px;
+    padding-top: 0px;
+}
+
+#loader p {
+    color: #007bff; /* Color del texto en tono azul */
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* Añade transiciones suaves para una apariencia más agradable */
+#loader,
+#loader img,
+#loader p {
+    transition: opacity 0.5s ease-in-out;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    z-index: 1001; /* Asegura que esté encima del formulario */
+    display: none;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    <link rel="stylesheet" href="../static/css/register.css">
+    <link rel="icon" href="static/img/favicon.ico" type="image/ico">
+    <title>Registro</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Registro de usuario</h2>
+        <form id="registroForm">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required autofocus tabindex="1">
+
+            <label for="apellidos">Apellidos:</label>
+            <input type="text" id="apellidos" name="apellidos" required tabindex="2">
+
+            <label for="correo">Correo Electrónico:</label>
+            <input type="email" id="correo" name="correo" required tabindex="3">
+
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" name="password" required tabindex="4">
+
+            <label for="password2">Repetir Contraseña:</label>
+            <input type="password" id="password2" name="password2" required tabindex="5">
+
+            <label for="edad">Edad:</label>
+            <input type="number" id="edad" name="edad" required tabindex="6">
+
+            <label for="sexo">Sexo:</label>
+            <select id="sexo" name="sexo" required tabindex="7">
+                <option value="masculino">Masculino</option>
+                <option value="femenino">Femenino</option>
+            </select>
+
+            <label for="peso">Peso (kg):</label>
+            <input type="number" id="peso" name="peso" required tabindex="8">
+
+            <label for="altura">Altura (cm):</label>
+            <input type="number" id="altura" name="altura" required tabindex="9">
+
+            <button type="submit" tabindex="10">Enviar</button>
+            <button type="button" class="volver" onclick="window.location.href='/'" tabindex="11">Volver</button>
+        </form>
+    </div>
+    <div id="overlay" class="overlay"></div>
+</body>
+</html>

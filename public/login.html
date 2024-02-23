@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate">
+        <meta http-equiv="pragma" content="no-cache">
+        <meta http-equiv="expires" content="0">
+        <link rel="stylesheet" href="../static/css/login.css">
+        <link rel="icon" href="../static/img/favicon.png" type="image/ico">
+        <title>Iniciar sesión</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="logo-container">
+                <img src="../static/img/logo.png" alt="App de seguimiento">
+            </div>
+            <form id="loginForm" class="form-container">
+                <label for="email">Email:</label>
+                <input type="text" id="email" name="email" required>
+                
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                
+                <div class="checkbox-container">
+                    <input type="checkbox" id="remember" name="remember" onclick="remember_check()">
+                    <label for="remember">Recordar</label>
+                </div>
+
+                <div id="error-container">
+                    <img src="../static/img/error-ico.png" alt="Icono X" class="error-icon" style="display: flex">
+                    <span id="txterror" class="error-txt">Usuario o contraseña incorrectos.</span>
+                </div>
+
+                <button type="submit" onclick="login(event)">Iniciar sesión</button>
+
+                <div id="loader">
+                    <img src="./static/img/loading.gif" alt="Cargando...">
+                </div>
+
+                <p class="register-text">¿No tienes cuenta? <a href="register.html">Registrarse</a></p>
+                <a href="forgot_password.html" class="enlace-simple">Olvidé contraseña</a>
+            </form>
+        </div>
+        <div id="overlay" class="overlay"></div>
+
+        <script src="../static/js/login.js"></script>
+    </body>
+</html>
